@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  server:
+    image: yiffer-srv:latest
+    ports:
+      - "8012:8012"
+    networks:
+      - redis-net
+      - proxy-net
+
+  client:
+    image: yiffer-cli:latest
+    ports:
+      - "8080:8080"
+    networks:
+      - proxy-net
+
+  reverseproxy:
+    image: yiffer-proxy:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./ssl/:/etc/ssl/
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - proxy-net
+
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    networks:
+      - redis-net
+
+networks:
+  redis-net:
+  proxy-net:
+    external: false
+
