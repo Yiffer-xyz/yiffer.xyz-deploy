@@ -16,6 +16,13 @@ services:
     networks:
       - proxy-net
 
+  ads-client:
+    image: yiffer-ads-cli:latest
+    ports:
+      - "8080:8080"
+    networks:
+      - proxy-net
+
   reverseproxy:
     image: yiffer-proxy:latest
     volumes:
