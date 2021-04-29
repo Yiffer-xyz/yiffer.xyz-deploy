@@ -23,6 +23,13 @@ services:
     networks:
       - proxy-net
 
+  admin-client:
+    image: yiffer-admin-cli:latest
+    ports:
+      - "8082:8082"
+    networks:
+      - proxy-net
+
   reverseproxy:
     image: yiffer-proxy:latest
     volumes:
