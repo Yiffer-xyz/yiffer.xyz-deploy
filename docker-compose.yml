@@ -2,7 +2,7 @@ version: "3"
 
 services:
   server:
-    image: yiffer-srv:latest
+    image: malann/yiffer-srv:latest
     ports:
       - "8012:8012"
     networks:
@@ -10,28 +10,28 @@ services:
       - proxy-net
 
   client:
-    image: yiffer-cli:latest
+    image: malann/yiffer-cli:latest
     ports:
       - "8080:8080"
     networks:
       - proxy-net
 
   ads-client:
-    image: yiffer-ads-cli:latest
+    image: malann/yiffer-ads-cli:latest
     ports:
       - "8081:8081"
     networks:
       - proxy-net
 
   admin-client:
-    image: yiffer-admin-cli:latest
+    image: malann/yiffer-admin-cli:latest
     ports:
       - "8082:8082"
     networks:
       - proxy-net
 
   reverseproxy:
-    image: yiffer-proxy:latest
+    image: malann/yiffer-proxy:latest
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
       - ./ssl/:/etc/ssl/
