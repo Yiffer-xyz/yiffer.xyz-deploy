@@ -1,6 +1,6 @@
 googleCloudConfigFilePath: config/google-cloud-sql-storage-config.json
-privateJwtKeyPath: config/token_private_key.key
-publicJwtKeyPath: config/token_public_key.key.pub
+
+tokenSecret: _
 
 tokenConfig:
   tokenDurationDays: 60
@@ -16,43 +16,37 @@ patreon:
   clientSecret: ""
   campaignId: ""
   patreonTiers:
-    -
-      amountCents: 200
+    - amountCents: 200
       showInPatronList: false
       showLinkInPatronList: false
       canVoteOnFeatures: false
       isVIPPatron: false
       dbTierNumber: 1
-    -
-      amountCents: 500
+    - amountCents: 500
       showInPatronList: true
       showLinkInPatronList: false
       canVoteOnFeatures: true
       isVIPPatron: false
       dbTierNumber: 2
-    -
-      amountCents: 1500
+    - amountCents: 1500
       showInPatronList: true
       showLinkInPatronList: true
       canVoteOnFeatures: true
       isVIPPatron: false
       dbTierNumber: 3
-    -
-      amountCents: 5000
+    - amountCents: 5000
       showInPatronList: true
       showLinkInPatronList: true
       canVoteOnFeatures: true
       isVIPPatron: true
       dbTierNumber: 4
-    -
-      amountCents: 10000
+    - amountCents: 10000
       showInPatronList: true
       showLinkInPatronList: true
       canVoteOnFeatures: true
       isVIPPatron: true
       dbTierNumber: 5
-    -
-      amountCents: 20000
+    - amountCents: 20000
       showInPatronList: true
       showLinkInPatronList: true
       canVoteOnFeatures: true
@@ -71,54 +65,42 @@ cloudinary:
 
 ads:
   card:
-    - 
-      durationMonths: 1
+    - durationMonths: 1
       price: 12
       discountedPrice: null
-    - 
-      durationMonths: 2
+    - durationMonths: 2
       price: 24
       discountedPrice: null
-    - 
-      durationMonths: 4
+    - durationMonths: 4
       price: 40
       discountedPrice: null
-    - 
-      durationMonths: 12
+    - durationMonths: 12
       price: 96
       discountedPrice: null
   banner:
-    -
-      durationMonths: 1
+    - durationMonths: 1
       price: 20
       discountedPrice: null
-    -
-      durationMonths: 2
+    - durationMonths: 2
       price: 40
       discountedPrice: null
-    -
-      durationMonths: 4
+    - durationMonths: 4
       price: 72
       discountedPrice: null
-    -
-      durationMonths: 12
+    - durationMonths: 12
       price: 192
       discountedPrice: null
   topSmall:
-    -
-      durationMonths: 1
+    - durationMonths: 1
       price: 16
       discountedPrice: null
-    -
-      durationMonths: 2
+    - durationMonths: 2
       price: 32
       discountedPrice: null
-    -
-      durationMonths: 4
+    - durationMonths: 4
       price: 56
       discountedPrice: null
-    -
-      durationMonths: 12
+    - durationMonths: 12
       price: 132
       discountedPrice: null
 
